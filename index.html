@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>🎃 BB's Angels 👻 Halloween Craft Shop</title>
-<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>🎄 BB's Angels ❄️ Christmas Craft Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
     :root {
-      --primary-orange: #ff6b35;
-      --soft-orange: #ff9357;
-      --dark-purple: #2d1b4e;
-      --deep-purple: #1a0f2e;
+      --primary-blue: #0ea5e9;
+      --soft-blue: #38bdf8;
+      --ice-blue: #e0f2fe;
+      --deep-blue: #0c4a6e;
+      --festive-red: #dc2626;
+      --festive-green: #059669;
       --white: #ffffff;
-      --text-dark: #ffffff;
-      --text-light: #cccccc;
-      --accent: #ff4500;
-      --green-glow: #00ff41;
-      --shadow-orange: rgba(255, 107, 53, 0.3);
-      --shadow-purple: rgba(45, 27, 78, 0.4);
-      --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #8b1fa8 50%, #2d1b4e 100%);
-      --gradient-subtle: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 100%);
+      --text-dark: #1e293b;
+      --text-light: #475569;
+      --accent: #0ea5e9;
+      --gold-glow: #fbbf24;
+      --shadow-blue: rgba(14, 165, 233, 0.3);
+      --shadow-light: rgba(224, 242, 254, 0.4);
+      --gradient-primary: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #e0f2fe 100%);
+      --gradient-festive: linear-gradient(135deg, #059669 0%, #0ea5e9 50%, #dc2626 100%);
+      --gradient-subtle: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     }
 
     * {
@@ -48,21 +51,21 @@
       width: 100%;
       height: 100%;
       background-image: 
-        radial-gradient(2px 2px at 20px 30px, rgba(255, 107, 53, 0.3), transparent),
-        radial-gradient(2px 2px at 40px 70px, rgba(139, 31, 168, 0.2), transparent),
-        radial-gradient(1px 1px at 90px 40px, rgba(0, 255, 65, 0.4), transparent),
-        radial-gradient(1px 1px at 130px 80px, rgba(255, 107, 53, 0.3), transparent),
-        radial-gradient(2px 2px at 160px 30px, rgba(139, 31, 168, 0.2), transparent);
+        radial-gradient(2px 2px at 20px 30px, rgba(14, 165, 233, 0.3), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(5, 150, 105, 0.3), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.6), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(220, 38, 38, 0.3), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(224, 242, 254, 0.4), transparent);
       background-repeat: repeat;
       background-size: 200px 100px;
       pointer-events: none;
       z-index: -2;
-      animation: spookyGlow 8s linear infinite;
+      animation: festiveGlow 8s linear infinite;
     }
 
-    @keyframes spookyGlow {
+    @keyframes festiveGlow {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.7; }
+      50% { opacity: 0.8; }
     }
 
     .star-elements {
@@ -78,10 +81,10 @@
 
     .floating-star {
       position: absolute;
-      color: var(--primary-orange);
-      animation: ghostFloat 6s ease-in-out infinite;
+      color: var(--soft-blue);
+      animation: snowfall 8s ease-in-out infinite;
       font-size: 1.5rem;
-      filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.6));
+      filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.6));
     }
 
     .floating-star:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
@@ -93,9 +96,9 @@
     .floating-star:nth-child(7) { bottom: 60%; left: 40%; animation-delay: -2.5s; }
     .floating-star:nth-child(8) { top: 70%; right: 50%; animation-delay: -1.5s; }
 
-    @keyframes ghostFloat {
-      0%, 100% { transform: translateY(0px) scale(1); opacity: 0.6; }
-      50% { transform: translateY(-20px) scale(1.15); opacity: 1; }
+    @keyframes snowfall {
+      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+      50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
     }
 
     .welcome-modal {
@@ -114,24 +117,26 @@
     }
 
     .welcome-content {
-      background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
       padding: 2.5rem;
       border-radius: 20px;
       max-width: 500px;
       margin: 1rem;
       text-align: center;
-      box-shadow: 0 15px 35px var(--shadow-orange), 0 0 50px rgba(255, 107, 53, 0.3);
-      border: 3px solid var(--primary-orange);
+      box-shadow: 0 15px 35px var(--shadow-blue), 0 0 50px rgba(14, 165, 233, 0.3);
+      border: 3px solid var(--primary-blue);
       position: relative;
+      border-image: linear-gradient(135deg, var(--festive-green), var(--primary-blue), var(--festive-red)) 1;
     }
 
     .welcome-content h2 {
-      color: var(--primary-orange);
+      color: var(--primary-blue);
       margin-bottom: 1.5rem;
       font-size: 2rem;
       font-weight: 600;
       position: relative;
-      text-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+      text-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+      font-family: 'Mountains of Christmas', cursive;
     }
 
     .welcome-content p {
@@ -152,12 +157,12 @@
       font-weight: 500;
       font-family: 'Lexend', sans-serif;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px var(--shadow-orange);
+      box-shadow: 0 4px 15px var(--shadow-red);
     }
 
     .enter-btn:hover {
       transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 8px 25px var(--shadow-orange), 0 0 30px rgba(255, 107, 53, 0.4);
+      box-shadow: 0 8px 25px var(--shadow-blue), 0 0 30px rgba(14, 165, 233, 0.4);
     }
 
     @keyframes modalAppear {
@@ -167,23 +172,23 @@
 
     header {
       background: var(--gradient-primary);
-      color: var(--white);
+      color: var(--text-dark);
       text-align: center;
       padding: 3rem 1rem 2rem;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 5px 30px var(--shadow-orange);
+      box-shadow: 0 5px 30px var(--shadow-blue);
     }
 
     header h1 {
-      font-family: 'Creepster', cursive;
+      font-family: 'Mountains of Christmas', cursive;
       font-size: 3.5rem;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 0.5rem;
       position: relative;
       z-index: 1;
-      text-shadow: 0 0 20px rgba(255, 107, 53, 0.8), 0 0 40px rgba(139, 31, 168, 0.6);
-      animation: spookyGlow 3s ease-in-out infinite;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(14, 165, 233, 0.6);
+      animation: festiveGlow 3s ease-in-out infinite;
     }
 
     header p {
@@ -191,8 +196,9 @@
       margin-top: 0.5rem;
       position: relative;
       z-index: 1;
-      font-weight: 300;
+      font-weight: 400;
       opacity: 0.9;
+      color: var(--text-dark);
     }
 
     .nav-tabs {
@@ -206,10 +212,10 @@
     }
 
     .nav-tab {
-      background: var(--dark-purple);
-      color: var(--primary-orange);
+      background: var(--white);
+      color: var(--primary-blue);
       padding: 0.8rem 1.5rem;
-      border: 2px solid var(--primary-orange);
+      border: 2px solid var(--primary-blue);
       border-radius: 25px;
       cursor: pointer;
       font-size: 0.9rem;
@@ -218,7 +224,7 @@
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 0 15px rgba(255, 107, 53, 0.2);
+      box-shadow: 0 0 15px rgba(14, 165, 233, 0.2);
     }
 
     .nav-tab::before {
@@ -228,7 +234,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: var(--gradient-primary);
+      background: var(--gradient-festive);
       transition: left 0.3s ease;
       z-index: -1;
     }
@@ -242,7 +248,7 @@
     .nav-tab.active {
       color: var(--white);
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px var(--shadow-orange), 0 0 25px rgba(255, 107, 53, 0.4);
+      box-shadow: 0 4px 15px var(--shadow-blue), 0 0 25px rgba(14, 165, 233, 0.4);
     }
 
     .container {
@@ -264,30 +270,30 @@
     }
 
     .product-card {
-      background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
       border-radius: 15px;
       padding: 2rem;
-      box-shadow: 0 5px 20px var(--shadow-purple), 0 0 30px rgba(255, 107, 53, 0.1);
-      border: 2px solid var(--primary-orange);
+      box-shadow: 0 5px 20px var(--shadow-light), 0 0 30px rgba(14, 165, 233, 0.1);
+      border: 2px solid var(--soft-blue);
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
     }
 
     .product-card::before {
-      content: '🎃';
+      content: '🎄';
       position: absolute;
       top: 15px;
       right: 15px;
       font-size: 1.5rem;
       opacity: 0.6;
-      filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.8));
+      filter: drop-shadow(0 0 10px rgba(5, 150, 105, 0.5));
     }
 
     .product-card:hover {
       transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 10px 30px var(--shadow-orange), 0 0 50px rgba(255, 107, 53, 0.3);
-      border-color: var(--soft-orange);
+      box-shadow: 0 10px 30px var(--shadow-blue), 0 0 50px rgba(14, 165, 233, 0.3);
+      border-color: var(--primary-blue);
     }
 
     .product-card:hover::before {
@@ -302,30 +308,32 @@
     }
 
     .product-card:nth-child(even)::before {
-      content: '👻';
+      content: '❄️';
+      filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.5));
     }
 
     .product-card:nth-child(3n)::before {
-      content: '🦇';
+      content: '⭐';
+      filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.5));
     }
 
     .product-card h3 {
       font-size: 1.3rem;
       margin-bottom: 0.8rem;
-      color: var(--primary-orange);
+      color: var(--primary-blue);
       font-weight: 600;
       position: relative;
       z-index: 1;
-      text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+      text-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
     }
 
     .product-card .price {
       font-size: 1.2rem;
       font-weight: 600;
-      color: var(--soft-orange);
+      color: var(--festive-red);
       margin-bottom: 1rem;
       font-family: 'Lexend', sans-serif;
-      text-shadow: 0 0 10px rgba(255, 147, 87, 0.5);
+      text-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
     }
 
     .product-card p {
@@ -338,17 +346,18 @@
 
     .featured-card {
       grid-column: 1 / -1;
-      background: var(--gradient-primary);
+      background: var(--gradient-festive);
       color: var(--white);
       text-align: center;
-      border: 3px solid var(--soft-orange);
-      box-shadow: 0 10px 40px var(--shadow-orange), 0 0 60px rgba(255, 107, 53, 0.4);
+      border: 3px solid var(--gold-glow);
+      box-shadow: 0 10px 40px var(--shadow-blue), 0 0 60px rgba(14, 165, 233, 0.4);
     }
 
     .featured-card::before {
       content: '🌟';
       font-size: 2rem;
       animation: pulse 2s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.8));
     }
 
     @keyframes pulse {
@@ -359,7 +368,7 @@
     .featured-card h3,
     .featured-card .price {
       color: var(--white);
-      text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
 
     .featured-card p {
@@ -367,34 +376,34 @@
     }
 
     .contact-section {
-      background: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
       margin-top: 2rem;
       border-radius: 20px;
       padding: 2.5rem;
       text-align: center;
-      box-shadow: 0 5px 20px var(--shadow-purple), 0 0 40px rgba(255, 107, 53, 0.2);
-      border: 2px solid var(--primary-orange);
+      box-shadow: 0 5px 20px var(--shadow-light), 0 0 40px rgba(14, 165, 233, 0.2);
+      border: 2px solid var(--primary-blue);
       position: relative;
     }
 
     .contact-section::before {
-      content: '🎃';
+      content: '🎄';
       position: absolute;
       top: 20px;
       left: 20px;
       font-size: 2rem;
       animation: twinkle 2s ease-in-out infinite;
-      filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.8));
+      filter: drop-shadow(0 0 10px rgba(5, 150, 105, 0.6));
     }
 
     .contact-section::after {
-      content: '👻';
+      content: '⭐';
       position: absolute;
       bottom: 20px;
       right: 20px;
       font-size: 2rem;
       animation: twinkle 2s ease-in-out infinite reverse;
-      filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.8));
+      filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.6));
     }
 
     @keyframes twinkle {
@@ -405,9 +414,9 @@
     .contact-section h2 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: var(--primary-orange);
+      color: var(--primary-blue);
       font-weight: 600;
-      text-shadow: 0 0 15px rgba(255, 107, 53, 0.6);
+      text-shadow: 0 0 15px rgba(14, 165, 233, 0.4);
     }
 
     .contact-section p {
@@ -417,19 +426,19 @@
     }
 
     .contact-info {
-      background: rgba(45, 27, 78, 0.6);
+      background: rgba(240, 249, 255, 0.8);
       padding: 1.5rem;
       border-radius: 15px;
       margin-top: 1.5rem;
-      border: 2px solid var(--primary-orange);
-      box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+      border: 2px solid var(--festive-green);
+      box-shadow: 0 0 20px rgba(5, 150, 105, 0.2);
     }
 
     .contact-info h3 {
-      color: var(--soft-orange);
+      color: var(--festive-green);
       margin-bottom: 1rem;
       font-size: 1.2rem;
-      text-shadow: 0 0 10px rgba(255, 147, 87, 0.5);
+      text-shadow: 0 0 10px rgba(5, 150, 105, 0.3);
     }
 
     .contact-info p {
@@ -443,10 +452,10 @@
       color: var(--text-light);
       margin: 2rem 0;
       padding: 1.5rem;
-      background: rgba(45, 27, 78, 0.8);
+      background: rgba(240, 249, 255, 0.8);
       border-radius: 15px;
       backdrop-filter: blur(5px);
-      border: 2px solid var(--primary-orange);
+      border: 2px solid var(--soft-blue);
     }
 
     @keyframes fadeInUp {
@@ -459,16 +468,16 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: var(--deep-purple);
+      background: var(--ice-blue);
     }
 
     ::-webkit-scrollbar-thumb {
-      background: var(--gradient-primary);
+      background: var(--gradient-festive);
       border-radius: 4px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--primary-orange);
+      background: var(--primary-blue);
     }
 
     @media (max-width: 768px) {
@@ -513,46 +522,46 @@
       left: 0;
       width: 0%;
       height: 3px;
-      background: var(--gradient-primary);
+      background: var(--gradient-festive);
       z-index: 1000;
       transition: width 0.1s ease;
-      box-shadow: 0 0 10px rgba(255, 107, 53, 0.8);
+      box-shadow: 0 0 10px rgba(14, 165, 233, 0.8);
     }
   </style>
 </head>
 <body>
   <div class="star-elements">
-    <div class="floating-star">🎃</div>
-    <div class="floating-star">👻</div>
-    <div class="floating-star">🦇</div>
-    <div class="floating-star">🎃</div>
-    <div class="floating-star">👻</div>
-    <div class="floating-star">🦇</div>
-    <div class="floating-star">🎃</div>
-    <div class="floating-star">👻</div>
+    <div class="floating-star">❄️</div>
+    <div class="floating-star">⭐</div>
+    <div class="floating-star">🎄</div>
+    <div class="floating-star">❄️</div>
+    <div class="floating-star">⭐</div>
+    <div class="floating-star">🎄</div>
+    <div class="floating-star">❄️</div>
+    <div class="floating-star">⭐</div>
   </div>
 
   <div class="welcome-modal" id="welcomeModal">
     <div class="welcome-content">
-      <h2>🎃 Welcome to BB's Angels 👻</h2>
-      <p>Enter our spooky craft shop for handcrafted Halloween paper goods, mystery boxes, and custom creations! We specialize in cute, spooky items perfect for Halloween treats!</p>
-      <p><em>👻 Frighteningly good products added weekly! 🦇</em></p>
-      <button class="enter-btn" onclick="closeWelcome()">Enter if You Dare 🎃</button>
+      <h2>🎄 Welcome to BB's Angels ❄️</h2>
+      <p>Enter our festive craft shop for handcrafted Christmas paper goods, mystery boxes, and custom creations! We specialize in cute, festive items perfect for holiday treats!</p>
+      <p><em>⭐ Magical new products added weekly! 🎁</em></p>
+      <button class="enter-btn" onclick="closeWelcome()">Enter the Winter Wonderland 🎄</button>
     </div>
   </div>
 
   <div class="scroll-progress" id="scrollProgress"></div>
 
   <header>
-    <h1>🎃 BB's Angels 👻</h1>
-    <p>Spooky Handcrafted Paper Goods & Halloween Creations</p>
+    <h1>🎄 BB's Angels ❄️</h1>
+    <p>Festive Handcrafted Paper Goods & Christmas Creations</p>
   </header>
 
   <div class="nav-tabs">
     <button class="nav-tab active" data-tab="featured">Featured 🌟</button>
     <button class="nav-tab" data-tab="nails">Paper Nails 💅</button>
     <button class="nav-tab" data-tab="bags">Mystery Bags 🎁</button>
-    <button class="nav-tab" data-tab="mystery">Spooky Surprises 👻</button>
+    <button class="nav-tab" data-tab="mystery">Holiday Surprises ⭐</button>
     <button class="nav-tab" data-tab="custom">Custom Orders 🎨</button>
     <button class="nav-tab" data-tab="bundles">Bundles 📦</button>
     <button class="nav-tab" data-tab="faq">FAQ 💭</button>
@@ -561,115 +570,115 @@
   <main class="container">
     <div class="product-grid active" id="featured">
       <div class="product-card featured-card">
-        <h3>🌟 Spooky Angel's Special Bundle</h3>
+        <h3>🌟 Festive Angel's Special Bundle</h3>
         <div class="price">$6.50</div>
-        <p>Our haunted mystery box packed with handcrafted Halloween goodies! Each box contains spooky paper crafts, stickers, and frightening treats. Perfect for Halloween gifts or discovering scary favorites!</p>
+        <p>Our magical mystery box packed with handcrafted Christmas goodies! Each box contains festive paper crafts, stickers, and delightful treats. Perfect for holiday gifts or discovering new favorites!</p>
       </div>
       <div class="product-card">
-        <h3>Quick Pick Halloween Bundle</h3>
+        <h3>Quick Pick Christmas Bundle</h3>
         <div class="price">$3.50</div>
-        <p>Perfect for busy Halloween shoppers! Get 1 BB Angel spooky sticker, 1 mystery bag, and 5 Halloween paper nails in one convenient order. Great value and variety!</p>
+        <p>Perfect for busy holiday shoppers! Get 1 BB Angel festive sticker, 1 mystery bag, and 5 Christmas paper nails in one convenient order. Great value and variety!</p>
       </div>
       <div class="product-card">
-        <h3>BB Angels Halloween Starter Pack</h3>
+        <h3>BB Angels Holiday Starter Pack</h3>
         <div class="price">$1.50</div>
-        <p>New to BB's Angels? Start here! Mystery Halloween character pack with exclusive spooky designs. Perfect introduction to our unique style and quality!</p>
+        <p>New to BB's Angels? Start here! Mystery Christmas character pack with exclusive festive designs. Perfect introduction to our unique style and quality!</p>
       </div>
     </div>
 
     <div class="product-grid" id="nails">
       <div class="product-card">
-        <h3>Halloween Paper Nails Mini Set</h3>
+        <h3>Christmas Paper Nails Mini Set</h3>
         <div class="price">$1.00</div>
-        <p>5 adorable spooky paper nails with unique Halloween designs! Perfect for photos, scrapbooking, or creative projects. High-quality paper with vibrant Halloween colors.</p>
+        <p>5 adorable festive paper nails with unique Christmas designs! Perfect for photos, scrapbooking, or creative projects. High-quality paper with vibrant holiday colors.</p>
       </div>
       <div class="product-card">
-        <h3>Halloween Paper Nails Full Set</h3>
+        <h3>Christmas Paper Nails Full Set</h3>
         <div class="price">$2.00</div>
-        <p>10 stunning Halloween paper nails featuring our signature spooky BB's Angels designs! Complete set with variety of patterns and colors for any Halloween occasion.</p>
+        <p>10 stunning Christmas paper nails featuring our signature festive BB's Angels designs! Complete set with variety of patterns and colors for any holiday occasion.</p>
       </div>
       <div class="product-card">
-        <h3>Premium Halloween Paper Nails Collection</h3>
+        <h3>Premium Christmas Paper Nails Collection</h3>
         <div class="price">$3.50</div>
-        <p>15 deluxe Halloween paper nails with special finishes and exclusive spooky designs. Our highest quality set with foil accents and premium materials.</p>
+        <p>15 deluxe Christmas paper nails with special finishes and exclusive festive designs. Our highest quality set with foil accents and premium materials.</p>
       </div>
     </div>
 
     <div class="product-grid" id="bags">
       <div class="product-card">
-        <h3>BB Angels Spooky Mystery Bag</h3>
+        <h3>BB Angels Festive Mystery Bag</h3>
         <div class="price">$2.00</div>
-        <p>Halloween surprise awaits! Each bag contains spooky mystery goodies from our collection - stickers, mini crafts, or exclusive Halloween items. Perfect for collectors!</p>
+        <p>Christmas surprise awaits! Each bag contains festive mystery goodies from our collection - stickers, mini crafts, or exclusive holiday items. Perfect for collectors!</p>
       </div>
       <div class="product-card">
-        <h3>Premium Halloween Mystery Bag</h3>
+        <h3>Premium Christmas Mystery Bag</h3>
         <div class="price">$4.00</div>
-        <p>Upgraded spooky mystery experience! Higher value items and exclusive Halloween pieces. May contain limited edition designs and premium materials.</p>
+        <p>Upgraded festive mystery experience! Higher value items and exclusive Christmas pieces. May contain limited edition designs and premium materials.</p>
       </div>
     </div>
 
     <div class="product-grid" id="mystery">
       <div class="product-card">
-        <h3>Mega Halloween Mystery Box</h3>
+        <h3>Mega Christmas Mystery Box</h3>
         <div class="price">$6.50</div>
-        <p>The ultimate spooky surprise experience! Packed with Halloween items from across all categories. Could contain exclusive prototypes and one-of-a-kind scary pieces!</p>
+        <p>The ultimate festive surprise experience! Packed with Christmas items from across all categories. Could contain exclusive prototypes and one-of-a-kind holiday pieces!</p>
       </div>
       <div class="product-card">
-        <h3>Paper Squishy Halloween Surprise</h3>
+        <h3>Paper Squishy Christmas Surprise</h3>
         <div class="price">$1.75</div>
-        <p>Soft, squishy, and absolutely spooky! Our Halloween paper squishies are unique tactile crafts that make great Halloween stress relievers and desk toys.</p>
+        <p>Soft, squishy, and absolutely festive! Our Christmas paper squishies are unique tactile crafts that make great holiday stress relievers and desk toys.</p>
       </div>
       <div class="product-card">
-        <h3>Weekly Halloween Special Item</h3>
+        <h3>Weekly Christmas Special Item</h3>
         <div class="price">$2.25</div>
-        <p>Changes every week! Could be anything from our Halloween workshop - experimental spooky designs, seasonal items, or customer favorites. Always a frightening surprise!</p>
+        <p>Changes every week! Could be anything from our Christmas workshop - experimental festive designs, seasonal items, or customer favorites. Always a delightful surprise!</p>
       </div>
     </div>
 
     <div class="product-grid" id="custom">
       <div class="product-card">
-        <h3>Custom Halloween Stickers</h3>
+        <h3>Custom Christmas Stickers</h3>
         <div class="price">$0.50 each</div>
-        <p>Personalized spooky stickers made just for you! Send us your Halloween ideas and we'll create custom designs. Perfect for personal use or small businesses.</p>
+        <p>Personalized festive stickers made just for you! Send us your Christmas ideas and we'll create custom designs. Perfect for personal use or small businesses.</p>
       </div>
       <div class="product-card">
-        <h3>Custom Halloween Bookmarks</h3>
+        <h3>Custom Christmas Bookmarks</h3>
         <div class="price">$1.00 each</div>
-        <p>Beautiful custom Halloween bookmarks designed with your favorite spooky colors, quotes, or characters. High-quality cardstock with optional lamination.</p>
+        <p>Beautiful custom Christmas bookmarks designed with your favorite festive colors, quotes, or characters. High-quality cardstock with optional lamination.</p>
       </div>
       <div class="product-card">
-        <h3>Custom Halloween Paper Crafts</h3>
+        <h3>Custom Christmas Paper Crafts</h3>
         <div class="price">Starting at $3.00</div>
-        <p>Have a spooky idea? We can bring it to life! Custom Halloween paper crafts designed and made specifically for you. Contact us to discuss your frightening vision.</p>
+        <p>Have a festive idea? We can bring it to life! Custom Christmas paper crafts designed and made specifically for you. Contact us to discuss your holiday vision.</p>
       </div>
     </div>
 
     <div class="product-grid" id="bundles">
       <div class="product-card">
-        <h3>Halloween Starter Bundle</h3>
+        <h3>Christmas Starter Bundle</h3>
         <div class="price">$3.50</div>
-        <p>Perfect introduction to spooky BB's Angels! Includes 1 Halloween sticker, 1 mystery bag, and 5 paper nails. Great value for first-time Halloween customers.</p>
+        <p>Perfect introduction to festive BB's Angels! Includes 1 Christmas sticker, 1 mystery bag, and 5 paper nails. Great value for first-time holiday customers.</p>
       </div>
       <div class="product-card">
-        <h3>Creative Halloween Bundle</h3>
+        <h3>Creative Christmas Bundle</h3>
         <div class="price">$8.00</div>
-        <p>Everything you need for Halloween crafting! Paper nails, stickers, bookmarks, and bonus spooky items. Perfect for creative projects and Halloween gifts.</p>
+        <p>Everything you need for Christmas crafting! Paper nails, stickers, bookmarks, and bonus festive items. Perfect for creative projects and holiday gifts.</p>
       </div>
       <div class="product-card">
-        <h3>Collector's Halloween Bundle</h3>
+        <h3>Collector's Christmas Bundle</h3>
         <div class="price">$12.00</div>
-        <p>The ultimate spooky BB's Angels experience! Items from every Halloween category plus exclusive collector pieces. Limited availability!</p>
+        <p>The ultimate festive BB's Angels experience! Items from every Christmas category plus exclusive collector pieces. Limited availability!</p>
       </div>
     </div>
 
     <div class="product-grid" id="faq">
       <div class="product-card">
         <h3>What is BB's Angels?</h3>
-        <p>We're a small business specializing in handcrafted Halloween paper goods and custom spooky creations. Every item is made with care and frightening attention to detail!</p>
+        <p>We're a small business specializing in handcrafted Christmas paper goods and custom festive creations. Every item is made with care and magical attention to detail!</p>
       </div>
       <div class="product-card">
         <h3>How do I place an order?</h3>
-        <p>Contact us directly through email or in real life with your spooky order. We'll confirm details and provide payment information, usually cash. Personal service guaranteed!</p>
+        <p>Contact us directly through email or in real life with your festive order. We'll confirm details and provide payment information, usually cash. Personal service guaranteed!</p>
       </div>
       <div class="product-card">
         <h3>Do you ship internationally?</h3>
@@ -677,34 +686,34 @@
       </div>
       <div class="product-card">
         <h3>Custom order process?</h3>
-        <p>Send us your spooky ideas and we'll discuss possibilities! We provide quotes based on complexity and materials. Typical turnaround is 1-2 weeks.</p>
+        <p>Send us your festive ideas and we'll discuss possibilities! We provide quotes based on complexity and materials. Typical turnaround is 1-2 weeks.</p>
       </div>
       <div class="product-card">
         <h3>What's in mystery items?</h3>
-        <p>Mystery items contain surprise Halloween goodies from our collection. Could be stickers, crafts, or exclusive spooky pieces. We ensure every mystery item has great value!</p>
+        <p>Mystery items contain surprise Christmas goodies from our collection. Could be stickers, crafts, or exclusive festive pieces. We ensure every mystery item has great value!</p>
       </div>
       <div class="product-card">
         <h3>Return policy?</h3>
-        <p>We want you to love your spooky purchase! If there's any issue with your order, contact us within 7 days and we'll make it right.</p>
+        <p>We want you to love your festive purchase! If there's any issue with your order, contact us within 7 days and we'll make it right.</p>
       </div>
     </div>
 
     <div class="contact-section">
-      <h2>Ready to Shop? 🎃</h2>
-      <p>Get in touch for orders, custom Halloween requests, or questions about our spooky products!</p>
-      <p><strong>We're here to help make your frightening vision come to life! 👻</strong></p>
+      <h2>Ready to Shop? 🎄</h2>
+      <p>Get in touch for orders, custom Christmas requests, or questions about our festive products!</p>
+      <p><strong>We're here to help make your holiday vision come to life! ⭐</strong></p>
       
       <div class="contact-info">
         <h3>Contact Information</h3>
         <p><strong>Email:</strong> nunezemma530@gmail.com</p>
         <p><strong>Response Time:</strong> Within 24 hours</p>
-        <p><em>Let us know your spooky order, and we got you covered! 🦇</em></p>
+        <p><em>Let us know your festive order, and we got you covered! 🎁</em></p>
       </div>
     </div>
   </main>
 
   <footer>
-    <p>© 2025 BB's Angels — Handcrafted with spooky love 🎃 Quality Halloween paper goods and custom creations 👻</p>
+    <p>© 2025 BB's Angels — Handcrafted with festive love 🎄 Quality Christmas paper goods and custom creations ❄️</p>
   </footer>
 
   <script>
